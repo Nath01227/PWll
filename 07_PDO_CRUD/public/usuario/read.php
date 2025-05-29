@@ -1,6 +1,7 @@
 <?php
+    include '../../includes/header.php'; 
+    include '../../includes/menu.php'; 
     include '../../config/connection.php';
-
 
     $stmt = $pdo->query('SELECT * FROM usuario');
     $usuarios = $stmt->fetchAll();
@@ -16,3 +17,5 @@
     <!-- <a href="">Editar</a> -->
     <hr>
     <?php } ?>
+
+    <?php include '../../   includes/footer.php'; ?>

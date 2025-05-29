@@ -17,8 +17,8 @@
     }
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         $id = isset($_POST['id']) ? $_POST['id'] : null ;
-        $username = isset($_POST['username']) ? $_POST['id'] : null ;
-        $password = isset($_POST['password']) ? $_POST['id'] : null ;
+        $username = isset($_POST['username']) ? $_POST['username'] : null ;
+        $password = isset($_POST['password']) ? $_POST['password'] : null ;
 
         if (empty($id)){
             echo "id Obrigatório";
@@ -41,8 +41,7 @@
         $stmt->bindParam(':password', $password);
         $stmt->execute();
 
-        
-
+     header('Location: read.php');  
     }
 
     ?>
