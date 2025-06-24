@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #1a1a1a;
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 500;
+  }
+  
+  nav a.active {
+    text-decoration: underline;
+  }
+  
+  .hero {
+    display: flex;
+    background-color: #0d0d0d;
+    color: white;
+    padding: 3rem 2rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .hero-text {
+    max-width: 50%;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .welcome {
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+  
+  .description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .login-btn {
+    padding: 0.5rem 1.5rem;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .hero-image img {
+    width: 450px;
+    max-width: 100%;
+  }
+  
+  .categories {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    background-color: #f5f5f5;
+  }
+  
+  .category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 12px;
+    width: 100px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .category img {
+    width: 40px;
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+  
+  .category span {
+    font-weight: 500;
+  }
+  
