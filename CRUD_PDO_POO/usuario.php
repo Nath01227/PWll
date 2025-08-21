@@ -13,13 +13,41 @@
             $this->tipo = $tipo;
         }
 
-        public function inserir(){ }
+        public function inserir($nome, $email, $senha, $tipo){ 
+            $tipo = 'admin';
+            $stmt = $pdo->prepare("INSERT INTO usuario (nome, email, senha, tipo) VALUES (:nome, :email, :senha, :tipo)");
+	    $stmt->bindParam(':nome', $nome);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':senha', $senha);
+        $stmt->bindParam(':tipo', $tipo);
+	    $stmt->execute();
+        }
      
-        public function buscar($id){ }
+        public function buscar($id){ 
+            $stmt = $pdo->query("SELECT * FROM usuario WHERE id = $id");
+	        $usuarios = $stmt->fetchAll();
+        }
 
-        public function buscarTodos(){ }
+        public function buscarTodos(){ 
+	    $stmt = $pdo->query("SELECT * FROM usuario");
+	    $usuarios = $stmt->fetchAll();
+        }
 
-        public function atualizar(){ }
+        public function atualizar($id, $nome, $site, $email){
+            $stmt = $pdo->prepare("UPDATE pessoas SET nome = :nome WHERE id = :id");
+            $stmt->bindParam(':id', $id);
+            $stmt->bindParam(':nome', $nome);
+            $stmt->bindParam(':email', $email);
+            $stmt->bindParam(':senha', $senha);
+            $stmt->bindParam(':tipo', $tipo);
+            $stmt->execute();
+        }
+
+        public function deletar(){
+            $stmt = $pdo->prepare('DELETE FROM usuario WHERE id = :id');
+            $stmt->bindParam(':id', $id);
+            $stmt->execute();
+        }
 
         public function login(){ }
 
